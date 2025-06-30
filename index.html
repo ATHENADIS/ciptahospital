@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beranda - Cipta Hospital Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4f9fd;
+      color: #333;
+    }
+
+    header {
+      background: #009DAE;
+      color: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo-title img {
+      height: 150px;
+      width: auto;
+    }
+
+    .logo-title h1 {
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #c9f3f8;
+    }
+
+    .hero {
+      background: url('https://i.pinimg.com/736x/6e/3e/07/6e3e0758b14f5654ca1aeee6100fcd7d.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .hero .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h2 {
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.35rem;
+      color: #eee;
+      margin-bottom: 2rem;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero .btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero .btn-group a {
+      display: inline-block;
+      background: #009DAE;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s ease;
+      font-size: 1rem;
+    }
+
+    .hero .btn-group a:hover {
+      background: #007e92;
+    }
+
+    section.content {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .info-box {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      margin: 1.5rem auto;
+      max-width: 800px;
+      text-align: center;
+    }
+
+    .pastel-mint {
+      background: #d2f5e3;
+    }
+
+    .info-box h3 {
+      color: #009DAE;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+
+    .info-box i {
+      margin-right: 8px;
+      color: #007e92;
+    }
+
+    .info-box p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .info-box a {
+      display: inline-block;
+      background: #009DAE;
+      color: #fff;
+      padding: 0.5rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .info-box a:hover {
+      background: #007e92;
+    }
+
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #009DAE;
+      color: white;
+      border: none;
+      padding: 0.8rem 1rem;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+
+    #backToTop:hover {
+      background-color: #007e92;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+      }
+
+      .hero .btn-group {
+        flex-direction: column;
+      }
+
+      .hero .btn-group a {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .logo-title {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-title">
+        <img src="../images/logoo.png" alt="Logo Rumah Sakit">
+        <h1>Cipta Hospital Indonesia</h1>
+      </div>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="services.html">Layanan</a>
+        <a href="doctors.html">Dokter</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Selamat Datang di Cipta Hospital Indonesia</h2>
+      <p>
+        Pelayanan kesehatan terbaik untuk Anda dan keluarga, diberikan dengan sentuhan profesionalisme, empati, dan teknologi medis terkini.
+      </p>
+      <div class="btn-group">
+        <a href="booking.html"><i class="fas fa-calendar-check"></i> Daftar Online</a>
+        <a href="jadwal-dokter.html"><i class="fas fa-clock"></i> Lihat Jadwal Dokter</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="info-box pastel-mint">
+      <h3><i class="fas fa-hospital-user"></i> Tentang Kami</h3>
+      <p>
+        Cipta Hospital Indonesia merupakan rumah sakit yang berdedikasi dalam memberikan layanan kesehatan terbaik
+        dengan standar mutu tinggi. Dengan pengalaman bertahun-tahun, kami terus tumbuh menjadi institusi kesehatan
+        yang inovatif, mengutamakan keselamatan pasien, serta menciptakan suasana penyembuhan yang nyaman dan bersahabat.
+      </p>
+      <a href="about.html">Selengkapnya</a>
+    </div>
+
+    <div class="info-box pastel-mint">
+      <h3><i class="fas fa-stethoscope"></i> Layanan Kami</h3>
+      <p>
+        Kami menyediakan berbagai layanan medis mulai dari pemeriksaan umum, layanan spesialis, IGD 24 jam,
+        rawat inap, ruang bersalin, bedah, hingga laboratorium dan farmasi. Dengan peralatan medis terkini dan tenaga ahli profesional,
+        kami memastikan setiap pasien mendapatkan perawatan yang optimal dan personal.
+      </p>
+      <a href="services.html">Selengkapnya</a>
+    </div>
+
+    <div class="info-box pastel-mint">
+      <h3><i class="fas fa-user-md"></i> Dokter Kami</h3>
+      <p>
+        Tim dokter kami terdiri dari spesialis pilihan yang telah melalui proses seleksi ketat dan memiliki rekam jejak profesional yang unggul.
+        Komitmen kami adalah menghadirkan pelayanan medis yang tidak hanya akurat dan efisien, namun juga penuh empati kepada setiap pasien.
+      </p>
+      <a href="doctors.html">Selengkapnya</a>
+    </div>
+
+    <div class="info-box pastel-mint">
+      <h3><i class="fas fa-map-marker-alt"></i> Kontak & Lokasi</h3>
+      <p>
+        Rumah sakit kami berlokasi strategis di jantung kota Jakarta dengan akses transportasi publik yang mudah dijangkau.
+        Anda dapat menghubungi kami melalui telepon, WhatsApp, atau email resmi untuk informasi lebih lanjut atau untuk membuat janji dengan dokter kami.
+      </p>
+      <a href="contact.html">Selengkapnya</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Cipta Hospital Indonesia</p>
+  </footer>
+
+  <button id="backToTop" title="Kembali ke Atas">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+</body>
+</html>

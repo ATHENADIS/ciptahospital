@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak - Cipta Hospital Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: #f4f9fd;
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #009DAE;
+      color: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    header h1 {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 1rem;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 3rem 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #009DAE;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .contact-info {
+      margin-top: 1.5rem;
+    }
+
+    .contact-info div {
+      margin-bottom: 1rem;
+    }
+
+    .contact-info strong {
+      display: block;
+      color: #009DAE;
+    }
+
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Cipta Hospital Indonesia</h1>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="services.html">Layanan</a>
+        <a href="doctors.html">Dokter</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Hubungi Kami</h2>
+      <p>Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, jangan ragu untuk menghubungi kami melalui informasi di bawah ini:</p>
+
+      <div class="contact-info">
+        <div>
+          <strong>Alamat:</strong>
+          Jl. Kesehatan No. 88, Jakarta Pusat, Indonesia
+        </div>
+        <div>
+          <strong>Telepon:</strong>
+          (021) 1234-5678
+        </div>
+        <div>
+          <strong>Email:</strong>
+          info@ciptahospital.co.id
+        </div>
+        <div>
+          <strong>Jam Operasional:</strong>
+          Senin - Sabtu, 08.00 - 20.00 WIB
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Cipta Hospital Indonesia</p>
+  </footer>
+</body>
+</html>

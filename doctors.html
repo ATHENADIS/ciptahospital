@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dokter - Cipta Hospital Indonesia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background: #f4f9fd;
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #009DAE;
+      color: #fff;
+      padding: 1rem 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    header h1 {
+      text-align: center;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 1rem;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 900px;
+    }
+
+    section h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #009DAE;
+    }
+
+    .doctor-card {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      background: #e0f7f9;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .doctor-icon {
+      font-size: 60px;
+      color: #009DAE;
+      text-align: center;
+    }
+
+    .doctor-card h3 {
+      margin-bottom: 0.2rem;
+      color: #009DAE;
+    }
+
+    .doctor-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .doctor-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Cipta Hospital Indonesia</h1>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang Kami</a>
+        <a href="services.html">Layanan</a>
+        <a href="doctors.html">Dokter</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Tim Dokter Kami</h2>
+
+      <div class="doctor-card">
+        <div class="doctor-icon"><i class="fas fa-user-doctor"></i></div>
+        <div>
+          <h3>dr. Floryn Manaha, Sp.PD</h3>
+          <p>Spesialis Penyakit Dalam - Berpengalaman lebih dari 15 tahun menangani berbagai penyakit kronis dan akut.</p>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-icon"><i class="fas fa-user-doctor"></i></div>
+        <div>
+          <h3>dr. Estes Priyadi, Sp.A</h3>
+          <p>Spesialis Anak - Fokus pada kesehatan anak-anak dari bayi hingga remaja dengan pendekatan yang ramah dan lembut.</p>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-icon"><i class="fas fa-user-doctor"></i></div>
+        <div>
+          <h3>dr. Angela Putri Nasro, Sp.JP</h3>
+          <p>Spesialis Jantung - Menangani pasien dengan penyakit jantung dan melakukan tindakan intervensi jantung non-bedah.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Cipta Hospital Indonesia</p>
+  </footer>
+</body>
+</html>
